@@ -26,6 +26,8 @@ public class PlayerMov : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 
