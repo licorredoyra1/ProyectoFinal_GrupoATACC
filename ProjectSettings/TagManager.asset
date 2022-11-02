@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - InteraccionNota
+  - MostrarNota
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - Laberinto
   - Iglesia
   - Piso
-  - RayCastDetect
-  - 
+  - 'RayCastDetect '
+  - Raycast Detect Nota
   - 
   - 
   - 
