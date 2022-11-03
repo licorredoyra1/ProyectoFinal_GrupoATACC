@@ -21,6 +21,13 @@ public class IAEnemi : MonoBehaviour
     public NavMeshAgent IA;
     public GameObject enemi;
     [SerializeField] private float speed;
+
+    //Sonidos
+    //public AudioSource pasos;
+    //public AudioSource respiracion;
+    //private bool Hactivo;
+    //private bool Vactivo;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +39,15 @@ public class IAEnemi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // respiracion.Play();
+        //pasos.Play();
         ComportamientoEnemi();
         IA.speed = speed;
 
     }
     public void ComportamientoEnemi()
     {
+        
         if (Vector3.Distance(transform.position, objetivo.transform.position) > 5)
         {
             animacion.SetBool("run", false);
@@ -60,6 +70,7 @@ public class IAEnemi : MonoBehaviour
                 case 2:
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, anguloRotacion, 0.5f);
                     IA.SetDestination(objetivo.transform.position);
+                    
                     //transform.Translate(Vector3.forward * 2 * Time.deltaTime);
                     animacion.SetBool("walk", true);
                     break;

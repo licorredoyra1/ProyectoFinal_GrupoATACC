@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PlayerMov : MonoBehaviour
 {
@@ -21,6 +22,14 @@ public class PlayerMov : MonoBehaviour
     Vector3 velocity;
 
     bool isGrounded;
+
+    public AudioSource pasos;
+
+    public AudioSource latidos;
+
+    private bool Hactivo;
+
+    private bool Vactivo;
 
     Animator anim;
     void Start()
@@ -50,6 +59,66 @@ public class PlayerMov : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            this.speed -= 4;
+            
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            this.speed += 4;
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            this.speed += 2;
+            
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            this.speed -= 2;
+        }
+
+        if (Input.GetButtonDown("Horizontal"))
+        {
+            Hactivo = true;
+            pasos.Play();
+         
+            latidos.Play();
+        }
+
+        if (Input.GetButtonDown("Vertical"))
+        {
+            Vactivo = true;
+            pasos.Play();
+          
+            latidos.Play();
+        }
+
+        if (Input.GetButtonUp("Horizontal"))
+        {
+            Hactivo = false;
+            if (Vactivo == false)
+            {
+                pasos.Pause();
+               
+
+            }
+
+        }
+
+        if (Input.GetButtonUp("Vertical"))
+        {
+            Vactivo = false;
+            if (Hactivo == false)
+            {
+                pasos.Pause();
+                
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;

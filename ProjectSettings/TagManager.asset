@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InteraccionNota
   - MostrarNota
+  - ObjMov
   layers:
   - Default
   - TransparentFX

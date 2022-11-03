@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa Juego final.unity
     guid: cc20514ca9e7dcb4fa97bc2a37ea3d70
-  - enabled: 1
-    path: Assets/Scenes/MostrarNota.unity
-    guid: ed0e7f89dcd48094e85d3e32145cd926
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
