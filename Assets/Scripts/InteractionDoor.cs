@@ -2,69 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionNotes : MonoBehaviour
+public class InteractionDoor : MonoBehaviour
 {
-    LayerMask mask;
-    float distance = 10f;
+    float distance = 3f;
 
     public GameObject TextDetect;
     GameObject lastRecognized = null;
 
-    public GameObject MostrarNota;
-
+    LayerMask mask;
 
     void Start()
     {
-        mask = LayerMask.GetMask("Raycast Detect Nota");
-        TextDetect.SetActive(false);  
+        mask = LayerMask.GetMask("Raycast Detect Puerta");
+        TextDetect.SetActive(false);
     }
-
     void Update()
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance, mask)) 
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance, mask))
         {
             Deselect();
             SelectObject(hit.transform);
-            if(hit.collider.tag == "InteraccionNota")
+            if (hit.collider.tag == "Puerta")
             {
-                if (Input.GetKeyDown(KeyCode.Q)) 
+                if (Input.GetKeyDown(KeyCode.F))
                 {
-                    MostrarNota.gameObject.SetActive(true);
+                    hit.collider.transform.GetComponent<DoorBehaviour>().ChangeDoorState();
                 }
             }
         }
-        else 
+        else
         {
             Deselect();
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            MostrarNota.gameObject.SetActive(false);
         }
 
     }
 
     void SelectObject(Transform transform)
     {
-        transform.GetComponent<MeshRenderer>().material.color = Color.red;
+        transform.GetComponent<MeshRenderer>().material.color = Color.yellow;
         lastRecognized = transform.gameObject;
     }
 
     void Deselect()
     {
-        if (lastRecognized) 
+        if (lastRecognized)
         {
             lastRecognized.GetComponent<Renderer>().material.color = Color.white;
             lastRecognized = null;
         }
     }
 
-    private void OnGUI() 
+    private void OnGUI()
     {
-        if (lastRecognized) 
+        if (lastRecognized)
         {
             TextDetect.SetActive(true);
         }
