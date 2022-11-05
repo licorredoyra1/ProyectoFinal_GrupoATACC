@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class RadioMuerte : MonoBehaviour
 {
     public Transform respawn;
@@ -9,6 +9,7 @@ public class RadioMuerte : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            SceneManager.LoadScene("Mapa Juego final");
             other.transform.position = respawn.position;
             GameOverMan.gameOverMan.CallGameOver();
 

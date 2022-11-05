@@ -17,7 +17,7 @@ public class IAEnemi : MonoBehaviour
     //ataque
     public bool atacando;
     //Nav-Mesh
-
+    public Transform respawn;
     public NavMeshAgent IA;
     public GameObject enemi;
     [SerializeField] private float speed;
@@ -104,5 +104,15 @@ public class IAEnemi : MonoBehaviour
          animacion.SetBool("attack", false);
          atacando = false;
      }*/
-    
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            other.transform.position = respawn.position;
+            GameOverMan.gameOverMan.CallGameOver();
+
+        }
+
+    }
+
 }

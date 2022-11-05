@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
 public class PlayerMov : MonoBehaviour
@@ -35,14 +36,15 @@ public class PlayerMov : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+
     }
 
 
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position,gruoundDistance,groundMask);
+
+
+        isGrounded = Physics.CheckSphere(groundCheck.position, gruoundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {
@@ -54,7 +56,7 @@ public class PlayerMov : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move* speed * Time.deltaTime);
+        controller.Move(move * speed * Time.deltaTime);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -64,7 +66,7 @@ public class PlayerMov : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             this.speed -= 4;
-            
+
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -75,7 +77,7 @@ public class PlayerMov : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             this.speed += 2;
-            
+
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -87,15 +89,17 @@ public class PlayerMov : MonoBehaviour
         {
             Hactivo = true;
             pasos.Play();
-         
+
             latidos.Play();
         }
 
         if (Input.GetButtonDown("Vertical"))
         {
             Vactivo = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             pasos.Play();
-          
+
             latidos.Play();
         }
 
@@ -105,7 +109,7 @@ public class PlayerMov : MonoBehaviour
             if (Vactivo == false)
             {
                 pasos.Pause();
-               
+
 
             }
 
@@ -117,14 +121,14 @@ public class PlayerMov : MonoBehaviour
             if (Hactivo == false)
             {
                 pasos.Pause();
-                
+
             }
         }
 
 
         velocity.y += gravity * Time.deltaTime;
 
-        controller.Move(velocity* Time.deltaTime);
+        controller.Move(velocity * Time.deltaTime);
         anim.SetFloat("VelX", x);
         anim.SetFloat("VelY", z);
     }
@@ -134,19 +138,19 @@ public class PlayerMov : MonoBehaviour
     {
         if (other.tag == "VidaPlayer")
         {
-           
+
             GameOverMan.gameOverMan.UnCallGameOver();
 
         }
-  
-        
-       if (other.CompareTag("Victoria"))
-       {
 
-          VictoryMan.victoryMan.CallVictory();
 
-       }
+        if (other.CompareTag("Victoria"))
+        {
 
-        
+            VictoryMan.victoryMan.CallVictory();
+
+        }
+
+
     }
 }
