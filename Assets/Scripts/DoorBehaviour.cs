@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
-    // verfica si la puerta está abierta o cerrada
+    // verfica si la puerta estï¿½ abierta o cerrada
     public bool doorOpen = false;
 
-    //Ángulo de la puerta al estar abierta
+    //ï¿½ngulo de la puerta al estar abierta
     float doorOpenAngle = -95f;
 
-    //Ángulo de la puerta al estar cerrada
+    //ï¿½ngulo de la puerta al estar cerrada
     float doorCloseAngle = 0.0f;
 
-    //Velocidad de rotación de la puerta
+    //Velocidad de rotaciï¿½n de la puerta
     float velocity = 3.0f;
+
+    public AudioSource door;
 
 
 
     public void ChangeDoorState()
     {
         doorOpen = !doorOpen;
+        door.Play();
     }
 
     void Update()
@@ -29,6 +32,7 @@ public class DoorBehaviour : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.Euler(0, doorOpenAngle, 0);
             transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, velocity * Time.deltaTime);
+            
 
         }
         else

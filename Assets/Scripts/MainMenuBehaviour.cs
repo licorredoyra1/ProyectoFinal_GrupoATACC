@@ -8,7 +8,7 @@ public class MainMenuBehaviour : MonoBehaviour
 
     public AudioSource click;
     public AudioSource back;
-
+    public AudioSource music;
 
     public void QuitGame(){
     Debug.Log("Quit");
@@ -22,6 +22,10 @@ public class MainMenuBehaviour : MonoBehaviour
     public void PlayBack()
     {
     back.Play();
+    }
+
+    public void PlayStart(){
+    music.Stop();    
     }
  
 }

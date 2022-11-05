@@ -23,10 +23,9 @@ public class IAEnemi : MonoBehaviour
     [SerializeField] private float speed;
 
     //Sonidos
-    //public AudioSource pasos;
-    //public AudioSource respiracion;
-    //private bool Hactivo;
-    //private bool Vactivo;
+
+    public AudioSource grunido;
+  
     
     // Start is called before the first frame update
     void Start()
@@ -70,7 +69,7 @@ public class IAEnemi : MonoBehaviour
                 case 2:
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, anguloRotacion, 0.5f);
                     IA.SetDestination(objetivo.transform.position);
-                    
+                    grunido.Play();
                     //transform.Translate(Vector3.forward * 2 * Time.deltaTime);
                     animacion.SetBool("walk", true);
                     break;
@@ -104,7 +103,7 @@ public class IAEnemi : MonoBehaviour
          animacion.SetBool("attack", false);
          atacando = false;
      }*/
-    public void OnTriggerEnter(Collider other)
+    /*public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
@@ -113,6 +112,6 @@ public class IAEnemi : MonoBehaviour
 
         }
 
-    }
+    }*/
 
 }
