@@ -9,6 +9,10 @@ TagManager:
   - ObjMov
   - InteraccionPuerta
   - Puerta
+  - RadioMuerte
+  - VidaPlayer
+  - Victoria
+  - Check
   layers:
   - Default
   - TransparentFX

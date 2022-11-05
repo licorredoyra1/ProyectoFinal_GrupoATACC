@@ -121,10 +121,32 @@ public class PlayerMov : MonoBehaviour
             }
         }
 
+
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity* Time.deltaTime);
         anim.SetFloat("VelX", x);
         anim.SetFloat("VelY", z);
+    }
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "VidaPlayer")
+        {
+           
+            GameOverMan.gameOverMan.UnCallGameOver();
+
+        }
+  
+        
+       if (other.CompareTag("Victoria"))
+       {
+
+          VictoryMan.victoryMan.CallVictory();
+
+       }
+
+        
     }
 }

@@ -104,13 +104,5 @@ public class IAEnemi : MonoBehaviour
          animacion.SetBool("attack", false);
          atacando = false;
      }*/
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Coliciona");
-        if (other.CompareTag("Puerta"))
-        {
-            puerta.GetComponent<Interactuar>().AbrirCerrarPuerta();
-            Debug.Log("esta entrando a su script");
-        }
-    }
+    
 }
