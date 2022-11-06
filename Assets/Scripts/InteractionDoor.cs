@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractionDoor : MonoBehaviour
 {
-    float distance = 3f;
+    float distance = 1.5f;
 
     public GameObject TextDetect;
     GameObject lastRecognized = null;
@@ -41,7 +41,7 @@ public class InteractionDoor : MonoBehaviour
 
     void SelectObject(Transform transform)
     {
-        transform.GetComponent<MeshRenderer>().material.color = Color.yellow;
+        transform.GetComponent<MeshRenderer>().material.color = Color.red;
         lastRecognized = transform.gameObject;
     }
 

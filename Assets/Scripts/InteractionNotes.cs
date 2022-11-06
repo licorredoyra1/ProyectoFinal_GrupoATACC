@@ -5,13 +5,10 @@ using UnityEngine;
 public class InteractionNotes : MonoBehaviour
 {
     LayerMask mask;
-    float distance = 10f;
+    float distance = 3f;
 
     public GameObject TextDetect;
     GameObject lastRecognized = null;
-
-    public GameObject MostrarNota;
-
 
     void Start()
     {
@@ -29,9 +26,13 @@ public class InteractionNotes : MonoBehaviour
             SelectObject(hit.transform);
             if(hit.collider.tag == "InteraccionNota")
             {
-                if (Input.GetKeyDown(KeyCode.Q)) 
+                if (Input.GetKeyDown(KeyCode.Q))
                 {
-                    MostrarNota.gameObject.SetActive(true);
+                    hit.collider.transform.GetComponent<MostrarNotas>().MostrarNota();                
+                }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hit.collider.transform.GetComponent<MostrarNotas>().DejarNota();
                 }
             }
         }
@@ -39,17 +40,11 @@ public class InteractionNotes : MonoBehaviour
         {
             Deselect();
         }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            MostrarNota.gameObject.SetActive(false);
-        }
-
     }
 
     void SelectObject(Transform transform)
     {
-        transform.GetComponent<MeshRenderer>().material.color = Color.red;
+        transform.GetComponent<MeshRenderer>().material.color = Color.yellow;
         lastRecognized = transform.gameObject;
     }
 
