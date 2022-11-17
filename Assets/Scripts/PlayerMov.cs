@@ -33,6 +33,8 @@ public class PlayerMov : MonoBehaviour
     private bool Vactivo;
 
     Animator anim;
+
+    public Transform respawn;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -148,7 +150,12 @@ public class PlayerMov : MonoBehaviour
         {
 
             VictoryMan.victoryMan.CallVictory();
-
+            if (Input.GetButton("e"))
+            {
+                VictoryMan.victoryMan.UnCallVictory();
+                SceneManager.LoadScene("NIVEL 2");
+               
+            }
         }
 
 

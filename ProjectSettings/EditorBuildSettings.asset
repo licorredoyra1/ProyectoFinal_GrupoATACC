@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa Juego final.unity
     guid: cc20514ca9e7dcb4fa97bc2a37ea3d70
+  - enabled: 1
+    path: Assets/Scenes/NIVEL 2.unity
+    guid: ebb87eef83db6904a84df87366041eb8
   m_configObjects: {}
