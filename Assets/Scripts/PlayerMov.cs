@@ -92,7 +92,7 @@ public class PlayerMov : MonoBehaviour
             Hactivo = true;
             pasos.Play();
 
-            latidos.Play();
+            //latidos.Play();
         }
 
         if (Input.GetButtonDown("Vertical"))
@@ -102,7 +102,7 @@ public class PlayerMov : MonoBehaviour
             Cursor.visible = false;
             pasos.Play();
 
-            latidos.Play();
+            //latidos.Play();
         }
 
         if (Input.GetButtonUp("Horizontal"))
@@ -150,12 +150,10 @@ public class PlayerMov : MonoBehaviour
         {
 
             VictoryMan.victoryMan.CallVictory();
-            if (Input.GetButton("e"))
-            {
-                VictoryMan.victoryMan.UnCallVictory();
-                SceneManager.LoadScene("NIVEL 2");
+            //VictoryMan.victoryMan.UnCallVictory();
+               SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                
-            }
+           
         }
 
 
