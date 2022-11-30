@@ -68,4 +68,4 @@ public class InteractionNotes : MonoBehaviour
             TextDetect.SetActive(false);
         }
     }
-}
+} 

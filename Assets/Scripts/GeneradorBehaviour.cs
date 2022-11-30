@@ -18,7 +18,7 @@ public class GeneradorBehaviour : MonoBehaviour
     void Start()
     {
         initTime = 0f;
-        endTime = 40f;
+        endTime = 15f;
         InvokeRepeating("Generate", initTime, endTime);
 
 
