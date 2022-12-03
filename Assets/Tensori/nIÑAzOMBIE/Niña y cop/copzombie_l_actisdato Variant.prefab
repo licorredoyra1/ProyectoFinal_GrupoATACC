@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa03cc73f6cc04b4ca60bd9327363b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetivo: {fileID: 641880451833293642, guid: 9205c87c68e19db4090e3de425d9cb31, type: 3}
+  objetivo: {fileID: 1895658776125213590, guid: 2e66dc3482da98f4f9034b15850955eb, type: 3}
 --- !u!195 &6078145080487040323
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1774,8 +1774,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8247690497716350198}
-  - component: {fileID: 2477153777087763845}
   - component: {fileID: 3115243089728574503}
+  - component: {fileID: 2075437046010192258}
   m_Layer: 0
   m_Name: RadioMuerte
   m_TagString: Untagged
@@ -1798,19 +1798,6 @@ Transform:
   m_Father: {fileID: 2588978590116754111}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2477153777087763845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6127672206132213233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e90d1e2b5d51f4ebc9b1f909b13f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 1900879437301386857, guid: 33632f039eb83744887fa4d6dbccceb5, type: 3}
 --- !u!136 &3115243089728574503
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1825,6 +1812,18 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2075437046010192258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6127672206132213233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604513656c1b5d8448937325a1a6ca20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6147542576204852524
 GameObject:
   m_ObjectHideFlags: 0

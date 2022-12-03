@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6700866804576454352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6308194724675213462, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_text
+      value: "!!FELICIDADES\xA1\xA1\nHas completado nuestro peque\xF1o proyecto!\n[PRESIONA
+        ENTER PARA VOLVER AL MENU]"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724723103945, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_Name
+      value: Ganar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795897965, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308194724795898002, guid: 592837dcc91de294e832160a03345a9f, type: 3}
+      propertyPath: m_Name
+      value: GamePass
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 592837dcc91de294e832160a03345a9f, type: 3}

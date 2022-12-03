@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2294193373270126753}
   - component: {fileID: 6182292578703904594}
-  - component: {fileID: 1882565055733682219}
+  - component: {fileID: 6411735171731907659}
   m_Layer: 0
   m_Name: RadioMuerte
   m_TagString: Untagged
@@ -47,7 +47,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1882565055733682219
+--- !u!114 &6411735171731907659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,10 +56,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3782901729286641656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e90d1e2b5d51f4ebc9b1f909b13f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 604513656c1b5d8448937325a1a6ca20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawn: {fileID: 1900879437301386857, guid: 33632f039eb83744887fa4d6dbccceb5, type: 3}
 --- !u!1001 &1617342442097702433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa03cc73f6cc04b4ca60bd9327363b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetivo: {fileID: 641880451833293642, guid: 9205c87c68e19db4090e3de425d9cb31, type: 3}
+  objetivo: {fileID: 1895658776125213590, guid: 2e66dc3482da98f4f9034b15850955eb, type: 3}
 --- !u!195 &1494020439
 NavMeshAgent:
   m_ObjectHideFlags: 0

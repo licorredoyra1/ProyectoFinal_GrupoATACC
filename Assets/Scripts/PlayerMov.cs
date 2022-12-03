@@ -90,7 +90,7 @@ public class PlayerMov : MonoBehaviour
         if (Input.GetButtonDown("Horizontal"))
         {
             Hactivo = true;
-            pasos.Play();
+          
 
             //latidos.Play();
         }
@@ -138,14 +138,7 @@ public class PlayerMov : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        /*if (other.tag == "VidaPlayer")
-        {
-
-            GameOverMan.gameOverMan.UnCallGameOver();
-
-        }*/
-
-
+      
         if (other.CompareTag("Victoria"))
         {
 

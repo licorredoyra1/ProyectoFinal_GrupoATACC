@@ -14,6 +14,7 @@ TagManager:
   - Victoria
   - Check
   - MostrarNota2
+  - Pass
   layers:
   - Default
   - TransparentFX
