@@ -9,9 +9,9 @@ public class MainMenuBehaviour : MonoBehaviour
     public AudioSource click;
     public AudioSource back;
     public AudioSource music;
+    public AudioSource scroll;
 
     public void QuitGame(){
-    Debug.Log("Quit");
     Application.Quit();
     }
 
@@ -27,5 +27,12 @@ public class MainMenuBehaviour : MonoBehaviour
     public void PlayStart(){
     music.Stop();    
     }
- 
+    public void PlayScroll() {
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            scroll.Play();
+        
+        }
+    
+    
+    }
 }
